@@ -1,9 +1,7 @@
 // Returns a message if user doesn't want contributors
 function renderContributingSection(confirmContributers, data) {
   if (!confirmContributers) {
-    return `
-  Thank you for your interest in helping out; however, I will not be accepting contributions from third parties.
-    `;
+    return `Thank you for your interest in helping out; however, I will not be accepting contributions from third parties.`;
   } else {
     return `
   ${data}
@@ -15,9 +13,7 @@ function renderContributingSection(confirmContributers, data) {
 // If there is no license, return an empty string
 function renderLicenseBadge(license) { 
   if (license !== 'no license') {
-    return `
-  ![badge](https://img.shields.io/badge/license-${license}-blue)
-    `;
+    return `![badge](https://img.shields.io/badge/license-${license}-blue)`;
   } else {
     return ' ';
   }
@@ -27,9 +23,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== 'no license') {
-  return `
-  [${license}](https://choosealicense.com/licenses/${license})
-    `;
+  return `[${license}](https://choosealicense.com/licenses/${license})`;
   } else {
     return ' ';
   }
@@ -39,11 +33,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== 'no license') {
-  return `
-  ## [License](#table-of-contents)
-  The application is covered under the following license:
-  ${renderLicenseLink(license)}
-    `;
+  return `## [License](#table-of-contents) The application is covered under the following license: ${renderLicenseLink(license)}`;
   } else {
     return ' ';
   }
@@ -53,9 +43,7 @@ function renderLicenseSection(license) {
  // If there is no license, return an empty string
 function renderLicenseTOC(license) {
   if (license !== 'no license') {
-  return `
-  * [License](#license)
-    `;
+  return `* [License](#license)`;
   } else {
     return ' ';
   }
